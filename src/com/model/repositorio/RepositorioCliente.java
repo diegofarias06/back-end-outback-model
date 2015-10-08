@@ -34,8 +34,12 @@ public class RepositorioCliente {
 		emf.close();
 	}
 	
+	public void removerId(int id){
+		Cliente cliente = buscarId(id);
+		removerCliente(cliente);
+	}
+	
 	public void removerCliente(Cliente cliente){
-		
 		em.getTransaction().begin();
 		em.remove(em.contains(cliente) ? cliente : em.merge(cliente));
 		em.getTransaction().commit();

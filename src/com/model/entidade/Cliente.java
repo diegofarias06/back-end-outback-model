@@ -23,6 +23,9 @@ public class Cliente {
 	@Column
 	private String telefone;
 
+	@Column
+	private int nMesa;
+	
 	public int getId() {
 		return id;
 	}
@@ -45,6 +48,14 @@ public class Cliente {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+
+	public int getnMesa() {
+		return nMesa;
+	}
+
+	public void setnMesa(int nMesa) {
+		this.nMesa = nMesa;
 	}
 
 }
